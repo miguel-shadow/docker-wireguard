@@ -14,7 +14,7 @@
 - [2. DNS dinámico](#2-dns-dinámico)
 - [3. Instalación](#3-instalación)
 - [4. Ejecutar](#4-ejecutar)
-- [5. Portale WEB](#5-portale-web)
+- [5. Portal WEB](#5-portal-web)
 - [6. Actualizar DNS Dinámico automáticamente](#6-actualizar-dns-dinámico-automáticamente)
 
 
@@ -39,7 +39,7 @@
 - `docker compose up -d --build`
 
 
-# 5. Portale WEB
+# 5. Portal WEB
 - **Acceder** mediante un **navegador**: `http://<ip_raspberry>:51821` ([WireGuard])
 
 

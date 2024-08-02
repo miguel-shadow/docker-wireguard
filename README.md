@@ -10,7 +10,7 @@
 
 
 **Contenidos**
-- [1. WireGuard](#1-wireguard)
+- [1. Docker WireGuard](#1-docker-wireguard)
 - [2. DNS dinámico](#2-dns-dinámico)
 - [3. Instalación](#3-instalación)
 - [4. Ejecutar](#4-ejecutar)
@@ -18,7 +18,7 @@
 - [6. Actualizar DNS Dinámico automáticamente](#6-actualizar-dns-dinámico-automáticamente)
 
 
-# 1. WireGuard
+# 1. Docker WireGuard
 - Permite crear una **VPN WireGuard** mediante **Docker** en una **Raspberry Pi**
 
 
@@ -40,7 +40,7 @@
 
 
 # 5. Portal WEB
-- **Acceder** mediante un **navegador**: `http://<ip_raspberry>:51821` ([WireGuard])
+- **Acceder** mediante un **navegador**: `http://<ip>:51821` ([WireGuard])
 
 
 # 6. Actualizar DNS Dinámico automáticamente

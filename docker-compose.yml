@@ -7,8 +7,7 @@ services:
     restart: unless-stopped
     environment:
       - WG_HOST=<dominio_dns_dinamico> # Nombre del dominio DNS Dinámico
-      - PASSWORD=<password_wg> # Contraseña portal WEB WireGuard
-      # Subred
+      - PASSWORD_HASH=<password_hash_wg> # Contraseña portal WEB WireGuard
       - WG_DEFAULT_ADDRESS=10.8.0.x # Subred
     ports:
       - 51820:51820/udp

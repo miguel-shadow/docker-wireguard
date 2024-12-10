@@ -1,6 +1,7 @@
 [Duck DNS]: https://www.duckdns.org/
 
 [wg-easy]: https://github.com/wg-easy/wg-easy
+[wg-easy-password-hash]: https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md
 
 [docker-compose.yml]: docker-compose.yml
 
@@ -23,16 +24,22 @@
 
 
 # 2. DNS dinámico
-- Mediante [Duck DNS], crear un **dominio** para nuestra IP dinámica
+- Mediante [Duck DNS] (u otro servicio), crear un **dominio** para nuestra IP dinámica
 
 
 # 3. Instalación
 > [!NOTE]
 > Esta guía está basada en la **documentación** en Github de [wg-easy]
+> Obtener hash de la contraseña [wg-easy-password-hash]
 
 - Modificar las variables (señaladas con `<>`) en el archivo [docker-compose.yml]
-    - `<dominio_dns_dinamico>`: Nombre del dominio DNS Dinámico (**\*Creado en Duck DNS anteriormente**)
-    - `<password_wg>`: Contraseña del portal WEB de WireGuard
+    - `<dominio_dns_dinamico>`: Nombre de dominio DNS Dinámico (**\*Creado en Duck DNS anteriormente**)
+    - `<password_hash_wg>`: Hash de la contraseña del portal WEB de WireGuard
+        - Para **obtener** el **hash** de la contraseña, se debe usar el siguiente comando (sustituir `<password_wg>` por la contraseña):
+            ```bash
+            docker run --rm -it ghcr.io/wg-easy/wg-easy wgpw '<password_wg>'
+            ```
+            - Copiar el hash sin `'` del comando y añadir un `$` a cada `$`. Ejemplo: `'$2a$12$mzOpVfUPmBSbLhFnCcPWr'` -> `$$2a$$12$$mzOpVfUPmBSbLhFnCcPWr`
 
 
 # 4. Ejecutar
